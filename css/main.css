@@ -1,0 +1,714 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+body {
+	background: #555;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.75;
+	margin-bottom: 30px;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+/*a {
+	color: #2985d1;
+	text-decoration: none;
+}*/
+h1, h2 {
+	font-family: 'Alfa Slab One', 'Open Sans', sans-serif;
+	font-weight: normal;
+	line-height: 1.2;
+}
+h1 {
+	font-size: 11vw;
+	text-align: left;
+	/*margin-top: 0;*/
+	margin-bottom: 20px;
+}
+p, h2 {
+	padding: 0;
+	margin: 0;
+}
+section .text-wrapper p:first-of-type {
+	font-weight: 700;
+	font-style: italic;
+	opacity: .4;
+	margin-top: 3px;
+}
+nav {
+	background: rgba(27,61,128, .33);
+	padding: 1rem 2rem;
+	border-bottom: solid 1px rgba(33, 29, 90, 0.089);
+}
+
+#main-nav a {
+	margin: 0 12px;
+	padding: 0 12px;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 1px;
+	/*padding: 0 12px;
+	text-transform: uppercase;
+	font-family: lato;
+  font-weight: bold;*/
+	align-items: center;
+	justify-content: left;
+  text-decoration: none;
+	transition: 330ms;
+}
+
+#main-nav ul li a:hover, a:focus {
+	background: rgba(25, 59, 128, 0.685);
+	text-shadow: 2px 2px 4px #0000005d;
+	/*width: 100%;*/
+}
+#main-nav .contact-btn {
+	font-weight: 400;
+	color: #fff;
+	background: rgba(25, 59, 128, 0.76);
+	padding: 3px 16px;
+	display: inline-block;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px 2px rgba(204, 204, 204, 0.603);
+}
+#main-nav .contact-btn:hover, .contact-btn:focus {
+	border: 0;
+	background: rgba(25, 59, 128, 0.562);
+	text-shadow: 2px 2px 4px #00000079;
+	box-shadow: 0 1px 2px 1px #ccc;
+}
+
+#main-nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*width: 100%;
+	background: rgba(27,61,128, .33);*/
+}
+
+#main-nav ul li {
+	position: relative;
+	flex: 1 0 auto;
+	text-align: left;
+}
+
+#main-nav li:hover .submenu > li {
+  display: flex;
+	flex-direction: column;
+	width: 100%;
+  top: 0px;
+}
+
+.submenu li {
+  display: none;
+  /*position: absolute;*/
+	top: 0px;
+	/*margin-left: 12px;*/
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+
+/*.submenu li {
+  position: relative;
+}*/
+
+.submenu li:hover li {
+  display: block;
+}
+
+.open-slide {
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	background: none;
+}
+
+.open-slide a {
+	background: none;
+}
+
+.arrow {
+  margin-left: 8px;
+  color: #eee;
+  font-size: 12px;
+}
+
+.side-nav{
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color:#111;
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+	transition:0.5s;
+	position: absolute;
+}
+.side-nav ul {
+	list-style: none;
+	line-height: 1.5;
+}
+
+.side-nav a{
+  padding:10px;
+  text-decoration: none;
+	font-size:20px;
+	line-height: 1.5;
+  color:#ccc;
+  display:block;
+  transition:330ms;
+}
+
+.side-nav a:hover{
+	font-weight: 600;
+  color:#fff;
+}
+
+.side-nav .btn-close{
+  position:absolute;
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+
+nav .logo {
+	background: none;
+	border: 0;
+}
+.logo {
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(0,0,0,.2));
+		filter: drop-shadow(0px 0px 4px rgba(0,0,0,.2));
+}
+
+#main-nav .logo:hover, .logo:focus {
+	-webkit-filter: drop-shadow(0px 0px 4px #ccc);
+	filter: drop-shadow(0px 0px 4px #ccc);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	background: linear-gradient(rgba(0, 162, 255, 0.658), rgba(146, 196, 254, 0.6)),
+				url(../img/car-spray-paint-b&w@2x.jpg) right top / cover;
+	background-size: cover;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.logo img {
+	width: 170px;
+}
+.masthead {
+	flex: 1;
+	padding: 2rem 1rem;
+	text-align: center;
+	padding: 2rem 1rem 1rem;
+}
+.masthead h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.5;
+	text-align: center;
+	margin-bottom: 12px;
+	}
+.masthead p {
+	/*width: 100%;*/
+	max-width: 1000px;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.5;
+	text-align: left;
+}
+.info h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 2rem;
+	margin: 0;
+}
+.info p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+}
+.info {
+	background: rgba(10, 10, 22, 0.5);
+	border-top: solid 1px rgba(14, 11, 54, 0.075);
+	justify-content: center;
+	padding: 1rem 2rem 2rem;
+}
+
+header, section {
+	box-shadow: 0 5px 30px rgba(0,0,0, 0.6);
+}
+.main-services {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	background: #fcfcfc;
+}
+.services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	max-width: 320px;
+	flex-grow: 2;
+	margin: 1rem auto;
+}
+.services h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 2;
+	margin: 1rem 0 0 0;
+}
+.icons {
+	border-radius: 50%;
+	border: 2px solid #c1272d;
+	/*background-color: white;*/
+	box-shadow: 0 0 10px 4px rgba(0,0,0,0.15);
+	display: flex;
+	height: 120px;
+	width: 120px;
+	justify-content: center;
+	align-items: center;
+	transition: 330ms;
+}
+
+a.icons:hover, a.icons:focus {
+	display: table-cell;
+	vertical-align: middle; 
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 0 12px 6px rgba(0,0,0,0.25);
+	text-decoration: none;
+	height: 120px;
+	width: 120px;
+}
+
+/*.icons a:hover, .icons a:focus {
+	border: 0;
+	background-color: #fa4f00;
+}*/
+
+/*.icons img {
+	height: 100%;
+	margin: 1rem;
+}*/
+section {
+	background: #fff;
+	/*margin: 15px;*/
+	margin-bottom: 0;
+}
+.first{
+	color: #fff;
+	background: rgba(0,0,0,1.0);
+}
+.second {
+	color: rgba(0,0,0,1.0);
+	background: rgba(200,200,200,1.0);
+}
+.solutions.second h2 {
+	border-color: rgba(0,0,0,1.0);
+
+}
+section .text-wrapper {
+	padding: 20px;
+}
+section .text-wrapper > :last-child {
+	margin-bottom: 0;
+}
+.price-list .popular {
+	line-height: 1.5;
+	margin: 0;
+	background: #02caf2;
+	color: #fff;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+
+main {
+	background: #fff;
+	/*margin: 15px;*/
+	margin-bottom: 0;
+}
+.media img {
+	width: 720px;
+	max-width: 100%;
+	max-height: 480px;
+	transition: 0.5s all ease;
+}
+.media img:hover {
+	transform: scale(0.97);
+	transition: 0.5s all ease;
+}
+.intro h2 {
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1px 0;
+	padding: 12px 0;
+}
+.intro p {
+		padding-top: 12px;
+}
+.intro p:first-of-type {
+	padding-top: 12px;
+}
+.footer {
+	margin-top: 45px;
+	color: #ccc;
+	text-align: center;
+	font-weight: 300;
+	display: flex;
+	flex-direction: row;
+}
+.footer ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer li {
+	margin-left: 50px;
+	-webkit-transition: all 300ms ease;
+			transition: all 300ms ease;
+}
+.footer .icon {
+		background-image: url(../img/social-icon-sprite.svg);
+		height: 35px;
+		width: 35px;
+		margin: auto;
+}
+.footer .social .icon ul li a:hover, footer .social .icon ul li a:focus {
+ 	-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+}
+.facebook .icon {
+		background-position: -35px 0;
+}
+.youtube .icon {
+		background-position: -70px 0;
+}
+.linkedin .icon {
+		background-position: -105px 0;
+}
+.yelp .icon {
+		background-position: -140px 0;
+}
+
+/*---- Mobile ---->*/
+@media (max-width: 599px) {
+	body {
+		margin: 0;
+	}
+	header {
+	color: #fff;
+	/*background: linear-gradient(rgba(0, 162, 255, 0.658), rgba(146, 196, 254, 0.6)), 
+				url(../img/car-spray-paint@2x.jpg) top center / cover;
+	background-size: cover;*/
+	min-height: 100vh;
+	}
+	.logo img {
+		width: 150px;
+		margin-bottom: -4rem;
+	}
+	#main-nav ul {
+		display: none;
+	}
+	h1 {
+		font-size: 2rem;
+		line-height: 1.5;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.heading {
+		/*margin-top: auto;*/
+		margin-top: 6rem;
+	}
+	.sub-heading h2 {
+		font-size: 22px;
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+	.masthead p {
+		font-size: 18px;
+		text-align: center;
+		/*margin-bottom: 2rem;*/
+	}
+	nav {
+		text-align: center;
+	}
+	nav ul {
+		margin-top: 10px;
+	}
+	.info {
+		text-align: center;
+	}
+	.store-info div {
+		border-right: solid 1px white;
+	}
+	.info h1 {
+		font-size: 18px;
+		line-height: 1.5;
+		margin: 0px;
+	}
+	.info p {
+		/*font-weight: 400;*/
+		line-height: 1.5;
+		margin: 0px;
+	}
+	.telephone-info p {
+		font-size: 24px;
+		/*font-weight: 700;*/
+		line-height: 1.75rem;
+		padding: 0;
+		/*margin-bottom: 20px;*/
+	}
+	.store-info {
+		padding: 0px;
+		margin-top: 10px;
+	}
+	.main-services {
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		padding: 1rem;
+	}
+	/*.services {
+		align-self: flex-start;
+		flex-grow: 2;
+	}*/
+	.services h2 {
+		line-height: 24px;
+		margin-top: 1rem;
+	}
+	
+	.solutions {
+		/*display: flex;
+		justify-content: center;
+		flex-wrap: wrap;*/
+		padding: 0 0 2rem;
+	}
+	.media img {
+    /*width: 450px;*/
+    max-width: 100%;
+    max-height: 450px;
+		transition: 0.5s all ease;
+	}
+	.media {
+    min-width: 0;
+	}
+  .media img:hover {
+    transform: scale(0.98);
+		transition: 0.5s all ease;
+	}
+	.intro {
+		text-align: left;
+    margin: 2rem;
+	}
+}
+
+/*<---- Tablet ---->*/
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: 4vw;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+		padding: 10px 3rem 0 2rem;
+	}
+	/*#main-nav a {
+    display: flex;
+	}*/
+	.logo {
+		flex-shrink: 0;
+	}
+
+	#main-nav .logo img {
+		width: 160px;
+		margin-bottom: -4rem;
+		/*margin-right: auto;*/
+	}
+
+	#main-nav a {
+		margin-right: auto;
+	}
+
+	nav .logo {
+		margin-right: auto;
+	}
+
+	nav li:last-of-type a {
+		margin-right: 1rem;
+	}
+
+	nav li:first-of-type a {
+		margin-right: 1rem;
+	}
+
+	.open-slide {
+		display:none
+	}
+
+	.heading {
+		margin-left: 2rem;
+		margin-top: auto;
+	}
+	.masthead {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+	.masthead h2 {
+		font-size: 3vw;
+		text-align: left;
+	}
+	.masthead p {
+		line-height: 2;
+	}
+	.sub-heading {
+		margin: 0 2rem;
+		align-content: flex-end;
+	}
+	.info {
+		display: flex;
+		justify-content: space-between;
+	}
+	.info .telephone-info {
+		flex-basis: 27%;
+		padding: 0 10px 0 0;
+		/*margin: 0 0 2rem 2rem;*/
+		margin-left: 2rem;
+	}
+	.telephone-info p {
+		font-size: 3vw;
+		line-height: 1.75;
+	}
+	.store-info {
+		font-family: 'Open Sans', sans-serif;
+		flex-basis: 33%;
+		padding: 0 10px 0px 30px;
+		border-left: #c1272d solid 1px;
+	}
+	.main-services {
+		margin: 0 auto;
+		padding: 1rem;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	img {
+		max-width: 100%;
+	}
+	
+	.services {
+			align-self: flex-start;
+			flex-grow: 1;
+			width: 290px;
+			padding: 5px; 
+			margin: 1rem;
+			/*height: 150px;*/
+		}
+	.solutions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 2rem;
+	}
+	.media {
+		/*flex: 2;
+		min-width: 0;
+		flex-basis: 66%;*/
+		text-align: center;
+		margin: 3rem 3rem 2rem rem;
+}
+	.intro {
+		/*flex: 1;*/
+		flex-basis: 33%;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		max-width: 720px;
+		margin: 3rem 2rem;
+		/*padding: 1rem;*/
+	}
+}
+/*<---- Desktop ---->*/
+@media (min-width: 1000px) {
+	body {
+		margin: 0 30px;
+	}
+	h1 {
+		font-size: 3.5vw;
+	}
+	/*header img {
+		margin-left: 1rem;
+	}*/
+	#main-nav a {
+    display: flex;
+	}
+
+	.masthead h2 {
+		font-size: 2.5vw;
+	}
+	.info {
+		display: flex;
+		justify-content: space-between;
+	}
+	.telephone-info p {
+		font-size: 2rem;
+		line-height: 1.75;
+	}
+	.services {
+	 	width: 320px;
+	}
+	main {
+		/*display: flex;*/
+		align-items: center;
+		max-width: 1310px;
+		margin: 30px auto;
+	}
+	.solutions {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: left;
+		padding: 3rem 2rem;
+	}
+	.media {
+		margin: 1rem;
+	}
+	.intro {
+		max-width: 720px;
+		margin: 2rem 1rem;
+	}
+	footer .footer {
+    display: flex;
+    align-items: center;
+    max-width: 1310px;
+    margin: 30px auto;
+}
+}
+/*#B3111A .submenu-2*/
