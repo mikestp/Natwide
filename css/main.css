@@ -75,7 +75,7 @@ nav {
 	border: 0;
 	background: rgba(25, 59, 128, 0.562);
 	text-shadow: 2px 2px 4px #00000079;
-	box-shadow: 0 1px 2px 1px #ccc;
+	box-shadow: 0 1px 2px 1px #aaa;
 }
 
 #main-nav ul {
@@ -128,8 +128,13 @@ nav {
 	top: 30px;
 	right: 0px;
 	background: none;
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(0,0,0,.4));
+	filter: drop-shadow(0px 0px 4px rgba(0,0,0,.4));
 }
-
+.open-slide:hover, .open-slide:focus {
+	-webkit-filter: drop-shadow(0px 0px 4px #bbb);
+	filter: drop-shadow(0px 0px 4px #bbb);
+}
 .open-slide a {
 	background: none;
 }
@@ -171,7 +176,9 @@ nav {
 
 .side-nav a:hover{
 	font-weight: 600;
-  color:#fff;
+	color:#eee;
+	-webkit-filter: drop-shadow(0px 0px 4px #ddd);
+	filter: drop-shadow(0px 0px 2px #ddd);
 }
 
 .side-nav .btn-close{
@@ -191,9 +198,9 @@ nav .logo {
 		filter: drop-shadow(0px 0px 4px rgba(0,0,0,.2));
 }
 
-#main-nav .logo:hover, .logo:focus {
-	-webkit-filter: drop-shadow(0px 0px 4px #ccc);
-	filter: drop-shadow(0px 0px 4px #ccc);
+.logo:hover, .logo:focus {
+	-webkit-filter: drop-shadow(0px 0px 4px #bbb);
+	filter: drop-shadow(0px 0px 4px #bbb);
 }
 
 header {
@@ -325,7 +332,6 @@ section {
 }
 .solutions.second h2 {
 	border-color: rgba(0,0,0,1.0);
-
 }
 section .text-wrapper {
 	padding: 20px;
@@ -369,35 +375,56 @@ main {
 .intro p:first-of-type {
 	padding-top: 12px;
 }
-.footer {
+footer {
 	list-style-type: none;
 	margin-top: 45px;
-	color: #ccc;
+	color: #aaa;
 	text-align: center;
 	font-weight: 300;
 	display: flex;
 	flex-direction: row;
 }
-.footer-wrapper .social ul li {
-	list-style-type: none;
-	padding: 0;
+#footer-nav .logo img {
+		width: 120px;
+		margin-bottom: -4rem;
+		/*margin-right: auto;*/
+	}
+.footer-nav a {
+	transition: 330ms;
+}
+#footer-nav ul, li {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+.social {
+	display: flex;
+}
+.social ul, li {
+	/*display: inline-block;*/
+	list-style: none;
+	margin-right: 1em;
 	justify-content: center;
 	align-items: center;
 }
 .social .icon {
-	margin-left: 50px;
-	-webkit-transition: all 300ms ease;
-			transition: all 300ms ease;
+	
 }
 .social .icon {
-		background-image: url(../img/social-icon-sprite.svg);
-		height: 35px;
-		width: 35px;
-		margin: auto;
+	background-image: url(../img/social-icon-sprite.svg);
+	height: 35px;
+	width: 35px;
+	margin-left: 50px;
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(0,0,0,.2));
+	filter: drop-shadow(0px 0px 4px rgba(0,0,0,.2));
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
 }
 ul li a.social, .icon:hover, ul li a.social, .icon:focus {
+	-webkit-filter: drop-shadow(0px 0px 4px #bbb);
+	filter: drop-shadow(0px 0px 4px #bbb);
  	-webkit-transform: scale(1.1);
-			transform: scale(1.1);
+	transform: scale(1.1);
 }
 .facebook .icon {
 		background-position: -35px 0;
